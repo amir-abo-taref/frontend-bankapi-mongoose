@@ -1,0 +1,9 @@
+.App{
+  display: flex;
+  gap: 3vw;
+  background-image: url("https://previews.123rf.com/images/chormuang/chormuang2105/chormuang210500019/168785814-internet-banking-technology-isometric-illustration-of-bank-on-dark-blue-technology-background-digita.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
