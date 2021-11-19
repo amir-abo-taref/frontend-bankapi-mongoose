@@ -8,7 +8,7 @@ const ShowAllUsers = () => {
 
   useEffect(() => {(async () => {
       setLoading(true);
-       await axios.get("http://localhost:8080/").then((res) => {
+       await axios.get("http://localhost:5001/").then((res) => {
         setAllUsers(res.data.users);
         setLoading(false);
       });
