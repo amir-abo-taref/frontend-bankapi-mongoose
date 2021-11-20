@@ -19,7 +19,7 @@ setUser({
 }
 const insertcash=()=>{
     if(user.acountId>0){
-        axios.put(`http://localhost:5001/api/users/updateMoney`,user).then(ref.current.innerHTML='').catch((err)=>{
+        axios.put(`https://frontend-bankapi-mongos.herokuapp.com/api/users/updateMoney`,user).then(ref.current.innerHTML='').catch((err)=>{
             console.log(err);
             ref.current.innerHTML="credit cants be updated"
         })
