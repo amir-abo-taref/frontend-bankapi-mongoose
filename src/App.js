@@ -9,12 +9,14 @@ import Transferring from "./components/Transferring"
 function App() {
   return (
     <div className="App">
-      <AddUsers/>
       <ShowAllUsers/>
+       <WithDrawMoney/>
+      <Transferring/>
+      <AddUsers/>
       <UpdateCridit/>
       <Deposting/>
-      <WithDrawMoney/>
-      <Transferring/>
+     
+      
     </div>
   );
 }

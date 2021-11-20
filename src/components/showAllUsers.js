@@ -28,7 +28,6 @@ const ShowAllUsers = () => {
                         <th>Credit</th>
                         <th>Money</th>
                         <th>Password</th>
-                        <th>Delete</th>
                     </tr>
                     {allUsers.map((e) => {
                         return (

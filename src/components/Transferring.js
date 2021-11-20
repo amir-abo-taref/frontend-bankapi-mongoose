@@ -19,7 +19,7 @@ setUser({
 }
 const Transferringtwousers=()=>{
     if(user.acountId>0){
-        axios.put(`http://localhost:5001/api/users/withDrawMoney`,user).then(ref.current.innerHTML="").catch((err)=>{
+        axios.put(`http://localhost:5001/api/users/Transferring`,user).then(ref.current.innerHTML="").catch((err)=>{
             console.log(err);
             ref.current.innerHTML="credit cants be updated"
         })
@@ -32,9 +32,9 @@ return (
 <ul>
     <li>acountId</li>
     <li><input type="number" min="0" name="acountId" id="acountId" value={user.acountId} onChange={inputHandler} placeholder="Enter your acountId" /></li>
-    <li><input type="number" min="0" name="acountId" id="acountId" value={user.acountId2} onChange={inputHandler} placeholder="Enter your acountId" /></li>
+    <li><input type="number" min="0" name="acountId2" id="acountId2" value={user.acountId2} onChange={inputHandler} placeholder="Enter your acountId" /></li>
     <li><input type="number" min="0" name="amount" id="amount" value={user.amount} onChange={inputHandler} placeholder="enter amount" /></li>
-    <li><input type="submit" className="btn" value="take your cash" onClick={Transferringtwousers}/></li>
+    <li><input type="submit" className="btn" value="send cash" onClick={Transferringtwousers}/></li>
     <li><div className="refmsg" ref={ref} /></li>
 </ul>
     </div>
