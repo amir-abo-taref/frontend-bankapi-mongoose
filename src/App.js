@@ -11,8 +11,8 @@ function App() {
     <div className="App">
       <ShowAllUsers/>
        <WithDrawMoney/>
+       <AddUsers/>
       <Transferring/>
-      <AddUsers/>
       <UpdateCridit/>
       <Deposting/>
      
