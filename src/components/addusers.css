@@ -1,7 +1,8 @@
 .userstaple {
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
+  
   padding-left: 2rem;
 
 }
@@ -11,7 +12,7 @@ ul {
   padding: 0;
 }
 li {
-  font-size: 3rem;
+  font-size: 2rem;
   color: white;
   
 }

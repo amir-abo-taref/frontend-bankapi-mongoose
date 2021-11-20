@@ -1,38 +1,64 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import "./showallusers.css"
+import React, { useEffect,useState } from 'react'
+import axios from 'axios'
+import './showallusers.css';
 
 const ShowAllUsers = () => {
-  const [allUsers, setAllUsers] = useState([]);
-  const [loding,setLoading] = useState(false);
+    const [allUsers, setAllUsers] = useState([])
 
-  useEffect(() => {(async () => {
-      setLoading(true);
-       await axios.get("http://localhost:5001/").then((res) => {
-        setAllUsers(res.data.users);
-        setLoading(false);
-      });
+    useEffect(() => {
+        ( async() =>{
+            await axios.get('http://localhost:5001/api/users').then(res =>{
+                setAllUsers(res.data)
+            })
+        } )()
+ 
+    }, [])
 
-    })();
-  }, []);
 
-  return (
-    <div className="userscontainer">
-        {console.log(allUsers)}
-      {!loding&&allUsers.map((e) => {
-        return (
-          <div className="cards" key={e.id}>
-            <div >name:{e.name}</div>
-            <div>email:{e.email}</div>
-            <div>password:{e.password}</div>
-            <div>cash:{e.cash}</div>
-            <div>credit:{e.credit}</div>
-            <div>acountid:{e.acountId}</div>
-          </div>
-        );
-      })}
+ 
+    return (
+        <div>
+        <div className="container">
+            <table className="rwd-table">
+                <tbody>
+                    <tr>
+                        <th>AcountId</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Credit</th>
+                        <th>Money</th>
+                        <th>Password</th>
+                        <th>Delete</th>
+                    </tr>
+                    {allUsers.map((e) => {
+                        return (
+                            <tr key={e._id}>
+                                <td className="burdocolor">{e.acountId}</td>
+                                <td>{e.name}</td>
+                                <td>{e.email}</td>
+                                <td>{e.credit}</td>
+                                <td>{e.cash}</td>
+                                <td>{e.password}</td>
+                                <td>
+                                    {/* <input
+                                        className="button-three"
+                                        type="button"
+                                        onClick={() => {
+                                            deleteHandler(e.id);
+                                        }}
+                                        value="Delete"
+                                    /> */}
+                                </td>
+                            </tr>
+                        );
+                    })}
+                </tbody>
+            </table>
+        </div>
+        <br/>
+        <br/>
     </div>
-  );
-};
+    )
+}
 
-export default ShowAllUsers;
+export default ShowAllUsers ;
