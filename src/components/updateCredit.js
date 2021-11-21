@@ -18,7 +18,7 @@ setUser({
 }
 const changecredit=()=>{
     if(user.acountId>0){
-        axios.put(`https://frontend-bankapi-mongos.herokuapp.com/api/users/updateCredit`,user).then(ref.current.innerHTML="").catch((err)=>{
+        axios.put(`https://backend-bankapi-mongos.herokuapp.com/api/users/updateCredit`,user).then(ref.current.innerHTML="").catch((err)=>{
             console.log(err);
             ref.current.innerHTML="credit cants be updated"
         })

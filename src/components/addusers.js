@@ -27,7 +27,7 @@ console.log(user)
 
 const addNewUser=()=>{
     if(user.name.length>1&&user.credit>=0&&user.cash>=0){
-        axios.post(`https://frontend-bankapi-mongos.herokuapp.com/api/users`,user).then(ref.current.innerHTML="").catch((err)=>{
+        axios.post(`https://backend-bankapi-mongos.herokuapp.com/api/users`,user).then(ref.current.innerHTML="").catch((err)=>{
             console.log(err);
             ref.current.innerHTML="user is already exist"
         })

@@ -7,7 +7,7 @@ const ShowAllUsers = () => {
 
     useEffect(() => {
         ( async() =>{
-            await axios.get('https://frontend-bankapi-mongos.herokuapp.com/api/users').then(res =>{
+            await axios.get('https://backend-bankapi-mongos.herokuapp.com/api/users').then(res =>{
                 setAllUsers(res.data)
             })
         } )()
